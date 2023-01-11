@@ -1,0 +1,146 @@
+.header {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  background-color: transparent;
+
+  @include mq(mobile) {
+    width: res($container-width-mobile);
+  }
+
+  @include mq(tablet) {
+    width: res($container-width-tablet);
+  }
+  @include mq(desktop) {
+    width: res($container-width-desktop);
+  }
+
+  @include mq(tablet) {
+    top: 24px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  justify-content: space-between;
+  gap: res(52px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  // padding-left: 15px;
+
+  @include mq(mobile) {
+    width: res($container-width-mobile - 30px);
+  }
+
+  @include mq(tablet) {
+    width: res($container-width-tablet - 94px);
+  }
+  @include mq(desktop) {
+    width: res($container-width-desktop - 170px);
+  }
+
+  @include mq(mobile-only){
+    gap: calc(24px * var(--coef));
+  }
+
+  @include mq(desktop) {
+    gap: 96px;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mq(tablet) {
+      gap: 72px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: res(6px);
+
+    @include mq(tablet) {
+      gap: 32px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    @extend %link;
+    color: var(--second-yellow-color);
+    font-weight: 500;
+    font-size: res(16px);
+    line-height: 1.2;
+    letter-spacing: 0.02;
+
+    @include mq(tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &__phone {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    color: var(--white-text-color);
+    gap: res(8px);
+
+    @include mq(tablet) {
+      padding: 9px;
+    }
+  }
+
+  &__phone--restaraunt {
+    border: none;
+
+    @include mq(tablet) {
+      border: 1px solid var(--second-yellow-color);
+      border-radius: 2px;
+      padding: 8px;
+    }
+  }
+  &__item--hotel {
+    display: flex;
+    align-items: center;
+  }
+
+  &__numbers {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: res(12px);
+
+    color: var(--wight-text-color);
+
+    @include mq(tablet) {
+      border: 1px solid var(--second-yellow-color);
+    }
+  }
+
+  &__svg {
+    width: res(24px);
+    height: res(24px);
+    fill: var(--second-yellow-color);
+  }
+
+  &__number {
+    display: none;
+    font-weight: 400;
+    font-size: res(14px);
+    line-height: 1.22;
+    color: var(--wight-text-color);
+    letter-spacing: 0.02em;
+
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+}

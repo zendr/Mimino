@@ -1,0 +1,265 @@
+.rooms-about {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq (mobile){
+    width: $container-width-mobile;
+  }
+  @include mq (tablet){
+    width: $container-width-tablet;
+  }
+  @include mq (desktop){
+    width: $container-width-desktop;
+  }
+
+  &--dark {
+    background-color: var(--secondary-bg-color);
+  }
+}
+.container-padding {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include mq(tablet-only){
+    padding-top: 62px;
+    padding-bottom: 40px;
+  }
+
+  @include mq(desktop){
+    padding-top: 72px;
+  }
+}
+
+.container-padding--last{
+  padding-bottom: 0;
+  @include mq(mobile-only){
+    padding-bottom: 32px;
+}
+}
+
+.container-hidden {
+  @include mq(mobile-only){
+    overflow:hidden;
+  }
+}
+.rooms-about__wrapper {
+  @include mq(tablet) {
+    position: relative;
+    top: -98px;
+    right: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    
+    &--reverso {
+      display: flex;
+      flex-direction: row-reverse;
+      left: 20px;
+    }
+  }
+  @include mq(desktop) {
+    &--two {
+      gap: 113px;
+    }
+  }
+}
+
+.rooms-about__text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--reverso {
+    align-items: end;
+  }
+
+  @include mq(tablet) {
+    max-width: 424px;
+  }
+
+  @include mq(desktop) {
+    max-width: 509px;
+  }
+}
+
+.rooms-about__descr {
+  margin-bottom: 8px;
+
+  font-family: font(_times_);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  color: var(--section-title-color);
+
+  &--reverso {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @include mq(tablet) {
+    margin-bottom: 4px;
+
+    font-size: 32px;
+  }
+}
+
+.rooms-about__title {
+  margin-bottom: 32px;
+
+  font-family: font(_film_);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: calc(43 / 40);
+  letter-spacing: 0.3em;
+  color: var(--mimino-second-color);
+
+  &--reverso {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @include mq(tablet) {
+    margin-bottom: 62px;
+
+    font-size: 64px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 72px;
+  }
+}
+
+.rooms-about__subtitle {
+  margin-bottom: 12px;
+
+  font-family: font(_times_);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.05em;
+  color: var(--black-text-color);
+  text-transform: uppercase;
+
+  & span {
+    text-transform: lowercase;
+  }
+
+  @include mq(tablet) {
+    margin-bottom: 16px;
+
+    font-size: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 24px;
+
+    font-size: 36px;
+  }
+}
+
+.rooms-about__text {
+  margin-bottom: 32px;
+  max-width: 258px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  letter-spacing: 0.02em;
+
+  @include mq(tablet) {
+    font-size: 16px;
+
+    max-width: 439px;
+  }
+
+  @include mq(desktop) {
+    font-weight: 700;
+  }
+}
+
+.rooms-about__img {
+  margin-bottom: 32px;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+
+  @media screen and (min-width:320px) and (max-width:413px) {
+    margin-left: 54px;
+  }
+
+  @include mq(mobile-only){
+    margin-left: auto;
+  }
+
+  @include mq(tablet) {
+    width: 400px;
+    margin-bottom: 48px;
+  }
+  @include mq(desktop) {
+    width: 460px;
+  }
+}
+.rooms-about__img--reverso {
+  margin-bottom: 32px;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  @include mq (tablet){
+    margin-bottom: 48px;
+    width: 400px;
+  }
+  @include mq(desktop) {
+    width: 460px;
+  }
+}
+.rooms-about__slider {
+  @include mq (desktop){
+    margin-top: 100px;
+  }
+}
+
+
+
+.rooms__container-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    // margin-top: 20px;
+
+  @include mq (tablet){
+    align-items: flex-end;
+    margin-bottom: 32px;
+    position: absolute;
+    bottom: 97px;
+    right: 47px;
+  }
+  @include mq (desktop){
+    right: 85px;
+  }
+}
+.rooms__container-button {
+  display: flex;
+  align-items: center;
+  @include mq (tablet){
+    align-items: flex-start;
+    left: 47px;
+  }
+  @include mq (desktop){
+    left: 85px;
+  }
+}
+.rooms__btn {
+  width: 236px;
+  padding: 14px 37px;
+  letter-spacing: 0;
+  &--s {
+    padding:14px 65px;
+  }
+}
+
+.swiper-double-lux {
+  @include mq(tablet-only){
+margin-left: 20px;
+  }
+}
